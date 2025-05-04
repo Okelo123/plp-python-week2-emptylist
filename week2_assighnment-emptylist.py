@@ -1,23 +1,24 @@
-# Step 1: Define the function to calculate the final price after applying a discount
-def calculate_discount(price, discount_percent):
-    if discount_percent >= 20:
-        discount_amount = price * (discount_percent / 100)
-        final_price = price - discount_amount
-        return final_price
-    else:
-        return price
+# Step 1: Create an empty list
+my_list = []
 
-# Step 2: Prompt the user to enter the original price and discount percentage
-price = float(input("Enter the original price of the item: "))
-discount_percent = float(input("Enter the discount percentage: "))
+# Step 2: Append elements 10, 20, 30, 40
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)
+my_list.append(40)
 
-# Step 3: Call the function to calculate the final price
-final_price = calculate_discount(price, discount_percent)
+# Step 3: Insert 15 at the second position (index 1)
+my_list.insert(1, 15)
 
-# Step 4: Print the final price after applying the discount or the original price
-if final_price == price:
-    print(f"No discount applied. The original price is: ${final_price:.2f}")
-else:
-    print(f"The final price after applying a {discount_percent}% discount is: ${final_price:.2f}")
-# Step 5: Print the data types of the inputs and the result
-print(f"\nData type of original price: {type(price)}")  
+# Step 4: Extend the list with [50, 60, 70]
+my_list.extend([50, 60, 70])
+
+my_list.pop()
+
+my_list.sort()
+
+index_of_30 = my_list.index(30)
+print("Index of 30:", index_of_30)
+
+print("Final list:", my_list)
+print("Length of the list:", len(my_list))
